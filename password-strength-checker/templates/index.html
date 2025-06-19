@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker - Matrix Style</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a000a 0%, #2d001a 100%), repeating-linear-gradient(120deg, rgba(255,45,85,0.08) 0 2px, transparent 2px 40px);
+            background-blend-mode: screen, overlay;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+        .container {
+            background: rgba(0,0,0,0.7);
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(255,0,0,0.15), 0 1.5px 8px rgba(0,0,0,0.5);
+            border: 1.5px solid #b30021;
+            max-width: 400px;
+            width: 100%;
+            padding: 36px 28px 28px 28px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .matrix-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.18;
+            background: repeating-linear-gradient(
+                to bottom,
+                #ff2d55 0px,
+                #ff2d55 2px,
+                transparent 2px,
+                transparent 40px
+            );
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-lines"></div>
+    <div class="container">
+        <h1>Password Strength Checker</h1>
+        <form method="POST">
+            <input type="password" name="password" placeholder="Enter your password" value="{{ password }}" required>
+            <button type="submit">Check</button>
+        </form>
+        {% if strength %}
+            <div class="result">
+                <strong>Strength:</strong> {{ strength }}
+            </div>
+        {% endif %}
+        {% if suggestions %}
+            <div class="suggestions">
+                <strong>Suggestions to improve your password:</strong>
+                <ul>
+                    {% for s in suggestions %}
+                        <li>{{ s }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html> 

@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/static/360_F_1155805639_eIHNkWZ03PbUCSa48psB3xmx1cav29FT.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional dark overlay */
+    padding: 36px 28px 28px 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(255,0,0,0.15), 0 1.5px 8px rgba(0,0,0,0.5);
+    border: 1.5px solid #b30021;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #ff2d55;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #b30021;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+input[type="password"] {
+    padding: 12px;
+    border: 1.5px solid #b30021;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    background: #232326;
+    color: #fff;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="password"]:focus {
+    border: 1.5px solid #ff2d55;
+    box-shadow: 0 0 8px #ff2d5544;
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(90deg, #b30021 0%, #ff2d55 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #b3002133;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff2d55 0%, #b30021 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.result {
+    margin-top: 22px;
+    font-size: 1.15rem;
+    color: #ff2d55;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 1px 6px #b30021;
+}
+
+.suggestions {
+    margin-top: 16px;
+    color: #ffb3b3;
+    background: #1a1a1d;
+    border-left: 4px solid #b30021;
+    border-radius: 6px;
+    padding: 12px 18px;
+    box-shadow: 0 1px 6px #b3002122;
+}
+
+.suggestions strong {
+    color: #ff2d55;
+}
+
+.suggestions ul {
+    margin: 8px 0 0 18px;
+    padding: 0;
+}
+
+.suggestions li {
+    margin-bottom: 4px;
+    font-size: 0.99rem;
+    color: #ffb3b3;
+}
+
+input[type="password"]::placeholder {
+    color: #b30021cc;
+    opacity: 1;
+} 
