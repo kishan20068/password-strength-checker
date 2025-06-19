@@ -10,4 +10,4 @@ This is a simple and stylish **Password Strength Checker** built using **Python 
 - Built with Flask (backend) and HTML/CSS (frontend)
 ![Screenshot 2025-06-19 140024](https://github.com/user-attachments/assets/6a535d5b-ef44-410a-81cd-cafab1151832)
 
-Visit: http://127.0.0.1:5000/
+Visit: http://127.0.0.1:5000
